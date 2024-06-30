@@ -14,7 +14,6 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   return (
@@ -22,10 +21,15 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
             <p className="font-bold text-inherit">QUIZZ</p>
           </NextLink>
         </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full"
+        justify="end"
+      >
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
@@ -42,12 +46,6 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-      </NavbarContent>
-
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
         <NavbarItem className="hidden md:flex">
           <ThemeSwitch />
         </NavbarItem>
