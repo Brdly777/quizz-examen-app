@@ -108,21 +108,21 @@ export default function Questions() {
     }
   };
 
-  if (questions.length === 0) return <Spinner size="lg" color="primary" />;
+  if (questions.length === 0) return <Spinner className="mt-40" label="Cargando..." size="lg" color="primary" />;
 
   if (quizCompleted) {
     return (
       <div className="max-w-md mx-auto p-4">
         <Card className="mt-28">
           <CardHeader>
-            <h2 className="text-xl font-semibold">Resultado del Examen</h2>
+            <h2 className="text-xl font-semibold">Resultado del Quizz</h2>
           </CardHeader>
           <CardBody className="-mt-2">
-            <p>Has completado el examen.</p>
+            <p>Has completado el Quizz.</p>
             <p>Tu calificación es: {calculateGrade()}</p>
           </CardBody>
           <Button color="primary" variant="solid" onPress={handleRestartExam}>
-            REINICIAR EXAMEN
+            REINICIAR QUIZZ
             <FaRedoAlt size={20} />
           </Button>
         </Card>

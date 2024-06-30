@@ -52,7 +52,7 @@ export default function RootLayout({
             <footer className="w-full flex items-center justify-center py-3">
               <Snippet hideCopyButton hideSymbol variant="flat">
                 <span>
-                  Examen <Code color="primary">Quizz website</Code>
+                  Examen <Code color="primary">Quizz WebSite</Code>
                 </span>
               </Snippet>
             </footer>
